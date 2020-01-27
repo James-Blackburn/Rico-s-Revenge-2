@@ -1,7 +1,12 @@
 #pragma once
+#include <SFML/Graphics.hpp>
+
+class Game;
 
 class GameState
 {
-	void update();
-	void draw();
+public:
+	virtual void update(){}
+	virtual void draw(){}
+	virtual void setParent(Game* parent){}
 };
